@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orderly Inventory Systems | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&family=Source+Sans+3&family=Work+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&family=Source+Sans+3:wght@400;500&family=Work+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Sawarabi+Gothic&family=Source+Sans+3:wght@400;500&family=Work+Sans&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/5c18320e8c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="parent-container">
+      <nav class="nav-container">
+        <div class="hamburger-menu hidden">
+          <i class="fas fa-bars hamburger-button"></i>
+        </div>
+        <div class="nav-header-container">
+          <div><h1 class="orderly-header">Orderly</h1></div>
+          <h1 class="sub-header">Inventory Systems</h1>
+        </div>
+        <div class="nav-settings">
+          <p class="your-store"></p>
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+      </nav>
+      <div class="side-bar-container">
+        <div class="side-bar dash" data-id="dash">
+          <div>
+            <i class="fas fa-tachometer-alt icon" data-id="dash"></i>
+          </div>
+          <p data-id="dash">Dashboard</p>
+        </div>
+        <div class="side-bar stores" data-id="stores">
+          <div>
+            <i class="far fa-building icon" data-id="stores"></i>
+          </div>
+          <p data-id="stores">Stores</p>
+        </div>
+        <div class="side-bar inventory" data-id="inventory">
+          <div>
+            <i class="fas fa-cube icon" data-id="inventory"></i>
+          </div>
+          <p data-id="inventory">Inventory</p>
+        </div>
+        <div class="side-bar orders" data-id="orders">
+          <div>
+            <i class="fas fa-truck-moving icon" data-id="orders"></i>
+          </div>
+          <p data-id="orders">Orders</p>
+        </div>
+        <p class="side-bar new-order" data-id="new-order">Create New Order</p>
+        <p class="side-bar manage-order" data-id="manage-order">
+          Manage Orders
+        </p>
+        <div class="side-bar vendor" data-id="vendor">
+          <div>
+            <i class="far fa-handshake icon" data-id="vendor"></i>
+          </div>
+          <p data-id="vendor">Vendors</p>
+        </div>
+      </div>
+      <div class="dash-container">
+        <div class="dash-row_1">
+          <div class="week-container">
+            <h1 class="week-container-header">This Week</h1>
+            <div class="week-child-container">
+              <div class="sunday-container weekday" data-id="0">
+                <h2 class="week-letter_0 week-letter" data-id="0">S</h2>
+                <div class="weekday-content weekday-content_0"></div>
+              </div>
+              <div class="monday-container weekday" data-id="1">
+                <h2 class="week-letter_1 week-letter" data-id="1">M</h2>
+                <div class="weekday-content weekday-content_1"></div>
+              </div>
+              <div class="tuesday-container weekday" data-id="2">
+                <h2 class="week-letter_2 week-letter" data-id="2">T</h2>
+                <div class="weekday-content weekday-content_2"></div>
+              </div>
+              <div class="wednesday-container weekday" data-id="3">
+                <h2 class="week-letter_3 week-letter" data-id="3">W</h2>
+                <div class="weekday-content weekday-content_3"></div>
+              </div>
+              <div class="thursday-container weekday" data-id="4">
+                <h2 class="week-letter_4 week-letter" data-id="4">T</h2>
+                <div class="weekday-content weekday-content_4"></div>
+              </div>
+              <div class="friday-container weekday" data-id="5">
+                <h2 class="week-letter_5 week-letter" data-id="5">F</h2>
+                <div class="weekday-content weekday-content_5"></div>
+              </div>
+              <div class="saturday-container weekday" data-id="6">
+                <h2 class="week-letter_6 week-letter" data-id="6">S</h2>
+                <div class="weekday-content weekday-content_6"></div>
+              </div>
+            </div>
+            <div class="week-child-container_compact">
+              <div class="today-container" data-id="0">
+                <h2 class="week-letter-cont_compact"></h2>
+                <div class="weekday-content_compact"></div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-stats-container_0 normal">
+            <h1>Inventory Summary</h1>
+            <div class="dashboard-stats_0">
+              <div class="inventory-total-container stat-container">
+                <div class="inventory-total"></div>
+                <h2 class="inventory-total-header">Total Quantity</h2>
+              </div>
+              <div class="different-items-container stat-container">
+                <div class="different-items-total"></div>
+                <h2 class="different-items-header">Total Items</h2>
+              </div>
+              <div class="inventory-low-container stat-container">
+                <div class="inventory-low"></div>
+                <h2 class="inventory-low-header">Low Stock Items</h2>
+              </div>
+              <div class="out-of-stock-items-container stat-container">
+                <div class="out-of-stock-item"></div>
+                <h2 class="out-of-stock-header">Out of Stock Items</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-stats-container_0_compact compact">
+          <div class="dashboard-stats_0_compact compact">
+            <div class="inventory-total-container stat-container_compact">
+              <div class="inventory-total_compact"></div>
+              <h2 class="inventory-total-header header_compact">
+                Total Quantity
+              </h2>
+            </div>
+            <div class="different-items-container stat-container_compact">
+              <div class="different-items-total_compact"></div>
+              <h2 class="different-items-header header_compact">Total Items</h2>
+            </div>
+            <div class="inventory-low-container stat-container_compact">
+              <div class="inventory-low_compact"></div>
+              <h2 class="inventory-low-header header_compact">Low Stock</h2>
+            </div>
+            <div class="out-of-stock-items-container stat-container_compact">
+              <div class="out-of-stock-item_compact"></div>
+              <h2 class="out-of-stock-header header_compact">Out of Stock</h2>
+            </div>
+          </div>
+        </div>
+        <div class="dash-row_2">
+          <div class="dashboard-stats-1_2">
+            <h1>Next Delivery</h1>
+            <div class="next-delivery-container stat-container"></div>
+          </div>
+          <div class="dashboard-stats-2_2">
+            <h1>Top Selling Items</h1>
+            <div class="top-selling-items-container stat-container">
+              <div class="top-selling-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stores-container">
+        <div class="stores-header">
+          <h1>Stores</h1>
+          <div class="stores-button-container">
+            <button class="add-stores-button">
+              <i class="fas fa-plus"></i>Add Store
+            </button>
+            <button class="clear-stores-button button">Clear</button>
+          </div>
+        </div>
+        <div class="stores-grid-container"></div>
+        <div class="add-stores-modul">
+          <h1>Add Store</h1>
+          <div class="store-input-container">
+            <div class="store-number-container">
+              <p>Store Number</p>
+              <input type="number" class="store-number-input" min="0" />
+            </div>
+            <div class="store-address-container">
+              <p>Address</p>
+              <input type="text" class="store-address-input" />
+            </div>
+          </div>
+          <div class="add-stores-button-container">
+            <button class="child-add-stores-button modul-button">Add</button>
+            <button class="add-stores-modul-close-button modul-button">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="inventory-container">
+        <div class="inventory-main-header-container">
+          <h1>Inventory</h1>
+          <div class="total-items-container">
+            <p class="total-items"></p>
+            <p>items</p>
+          </div>
+        </div>
+        <div class="child-inventory-container">
+          <div class="header-search-container">
+            <div class="search-container">
+              <input
+                type="text"
+                class="search-input_inventory"
+                placeholder="item or vendor"
+              />
+              <button class="search-button">Search</button>
+            </div>
+            <div class="welcome-header-button-container">
+              <button class="open-modul">
+                <i class="fas fa-plus"></i>
+                <p>Add Inventory</p>
+              </button>
+              <button class="clear-inventory-button button">Clear</button>
+            </div>
+          </div>
+          <div class="inventory-categories-container">
+            <p class="inv-cateogry-header_name">
+              Name <i class="fas fa-sort-amount-down name-icon"></i>
+            </p>
+            <p>
+              Quantity <i class="fas fa-sort-amount-down quantity-icon"></i>
+            </p>
+            <p>Price <i class="fas fa-sort-amount-down price-icon"></i></p>
+            <p class="inv-cateogry-header_avail">
+              Availability <i class="fas fa-sort-amount-down status-icon"></i>
+            </p>
+            <p>Vendor</p>
+            <p>Actions</p>
+          </div>
+          <div class="inventory-content"></div>
+        </div>
+        <div class="confirm-delete-inventory-memo">
+          <div>
+            <div class="confirm-delete-orders-memo_header">
+              <h1>Attention!</h1>
+            </div>
+            <div class="confirm-delete-orders-memo_msg">
+              <p>Are you sure you want to delete all inventory?</p>
+            </div>
+          </div>
+          <div class="confirm-delete-orders-memo_buttons">
+            <button class="yes-confirm-delete-inv modul-button">Yes</button>
+            <button class="no-confirm-delete-inv modul-button">No</button>
+          </div>
+        </div>
+      </div>
+      <div class="add-inventory-modul">
+        <div class="modul-header-container">
+          <h1>Add Inventory</h1>
+        </div>
+        <div class="field-containers">
+          <div class="name-container">
+            <p>Name</p>
+            <input
+              type="text"
+              class="name-input field"
+              placeholder="ex: 'Eggs'"
+            />
+          </div>
+          <div class="quantity-container">
+            <p>Quantity</p>
+            <input type="number" / class="quantity-input field" min="0">
+          </div>
+          <div class="price-container">
+            <p>Price</p>
+            <input
+              type="number"
+              class="price-input field"
+              placeholder="$"
+              min="0"
+            />
+          </div>
+          <div class="upc-container">
+            <p>UPC</p>
+            <input type="number" / class="upc-input field" min="0">
+          </div>
+          <div class="notes-container">
+            <p>Vendor</p>
+            <select name="vendor" id="vendor-input"></select>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="add-item modul-button">Add</button>
+          <button class="close-modul modul-button">Close</button>
+        </div>
+      </div>
+      <div class="edit-inventory-modul">
+        <div class="modul-header-container">
+          <h1>Edit Inventory</h1>
+        </div>
+        <div class="name-container">
+          <p>Name</p>
+          <input type="text" class="name-input_edit field" />
+        </div>
+        <div class="quantity-container">
+          <p>Quantity</p>
+          <input type="number" / class="quantity-input_edit field" min="0">
+        </div>
+        <div class="price-container">
+          <p>Price</p>
+          <input type="number" / class="price-input_edit field" min="0">
+        </div>
+        <div class="upc-container_edit">
+          <p class="upc_edit">UPC</p>
+          <p class="upc-input_edit field"></p>
+        </div>
+        <div class="notes-container">
+          <p>Vendor</p>
+          <p id="vendor-input_edit"></p>
+        </div>
+        <div class="button-container">
+          <button class="confirm-edit-item button">Save</button>
+          <button class="close-edit-modul button">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="confirm-deletion-container">
+      <h1>Confirm</h1>
+      <p>Are you sure you want to delete this item?</p>
+      <div class="delete-buttons-container">
+        <button class="confirm-button-yes">Yes</button>
+        <button class="confirm-button-no">No</button>
+      </div>
+    </div>
+    <div class="sign-in-container">
+      <div class="sign-in-left">
+        <h1>Orderly</h1>
+        <div class="input-container">
+          <input type="text" placeholder="Email" class="input-1 input" />
+          <input type="text" placeholder="Password" class="input-2 input" />
+        </div>
+        <div class="sign-in-button-container">
+          <button class="sign-in-button">LOGIN</button>
+        </div>
+      </div>
+      <div class="sign-in-right">
+        <p>words</p>
+      </div>
+    </div>
+    <div class="manage-order-container">
+      <div class="order-received-memo">
+        <p>Order Received!</p>
+      </div>
+      <div class="confirm-delete-futureorders-memo">
+        <div>
+          <div class="confirm-delete-orders-memo_header">
+            <h1>Attention!</h1>
+          </div>
+          <div class="confirm-delete-orders-memo_msg">
+            <p>Are you sure you want to delete all incoming orders?</p>
+          </div>
+        </div>
+        <div class="confirm-delete-orders-memo_buttons">
+          <button class="yes-confirm-delete-futureorders modul-button">
+            Yes
+          </button>
+          <button class="no-confirm-delete-futureorders modul-button">
+            No
+          </button>
+        </div>
+      </div>
+      <div class="confirm-delete-pastorders-memo">
+        <div>
+          <div class="confirm-delete-orders-memo_header">
+            <h1>Attention!</h1>
+          </div>
+          <div class="confirm-delete-orders-memo_msg">
+            <p>Are you sure you want to delete all past orders?</p>
+          </div>
+        </div>
+        <div class="confirm-delete-orders-memo_buttons">
+          <button class="yes-confirm-delete-pastorders modul-button">
+            Yes
+          </button>
+          <button class="no-confirm-delete-pastorders modul-button">No</button>
+        </div>
+      </div>
+      <div class="manage-orders-main-header-container">
+        <h1>Upcoming Orders</h1>
+      </div>
+      <div class="child-orders-container">
+        <div class="orders-header-container">
+          <div class="header-search-container">
+            <div class="search-container">
+              <input
+                type="text"
+                class="search-input_orders"
+                placeholder="item or vendor"
+              />
+              <button class="search-order-button">Search</button>
+            </div>
+            <div class="welcome-header-button-container">
+              <button
+                class="clear-futureorders-button clear-orders-button button"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+          <div class="orders-categories-container">
+            <p class="vendor-name-header">
+              Vendor Name <i class="fas fa-sort-amount-down name-icon"></i>
+            </p>
+            <p>Invoice</p>
+            <p>
+              Total Products
+              <i class="fas fa-sort-amount-down quantity-icon"></i>
+            </p>
+            <p>Cost</p>
+            <p>Paid Status</p>
+            <p>Delivery Date</p>
+            <p>Actions</p>
+          </div>
+        </div>
+        <div class="orders-content">
+          <!--- Upcoming orders go here-->
+        </div>
+        <div class="stats-container">
+          <p class="total-items"></p>
+        </div>
+      </div>
+      <!-- PAST ORDERS-->
+      <div class="manage-orders-main-header-container">
+        <h1>Past Orders <i class="fas fa-caret-down"></i></h1>
+      </div>
+      <div class="child-orders-container_past">
+        <div class="orders-header-container">
+          <div class="header-search-container">
+            <div class="search-container">
+              <input
+                type="text"
+                class="search-input_pastorders"
+                placeholder="item or vendor"
+              />
+              <button class="search-pastorder-button">Search</button>
+            </div>
+            <div class="welcome-header-button-container">
+              <button
+                class="clear-pastorders-button clear-orders-button button"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+          <div class="pastorders-categories-container">
+            <p class="vendor-name-header">
+              Vendor Name <i class="fas fa-sort-amount-down name-icon"></i>
+            </p>
+            <p>Invoice</p>
+            <p>
+              Total Products
+              <i class="fas fa-sort-amount-down quantity-icon"></i>
+            </p>
+            <p>Cost</p>
+            <p>Paid Status</p>
+            <p>Delivery Date</p>
+          </div>
+        </div>
+        <div class="past-orders-content">
+          <!--- Past orders go here-->
+        </div>
+        <div class="stats-container">
+          <p class="total-items"></p>
+        </div>
+      </div>
+    </div>
+    <div class="new-order-container">
+      <h1 class="new-order-header">Create New Order</h1>
+      <div class="order-placed-memo">
+        <p>Order Placed!</p>
+      </div>
+      <div class="new-order-options-container">
+        <div class="vendor-name-container">
+          <p>Vendor</p>
+          <select name="Vendor" id="vendor"></select>
+        </div>
+        <div class="delivery-container">
+          <p>Estimated Delivery Date</p>
+          <input
+            type="text"
+            class="estimated-delivery-date-input"
+            placeholder="mm/dd/yyyy"
+          />
+        </div>
+        <div class="new-order-buttons-cont">
+          <button class="add-items-to-delivery">Start Order</button>
+          <button class="reset-delivery">Reset</button>
+        </div>
+      </div>
+      <div class="ordered-items-container">
+        <div class="ordered-items-child">
+          <div class="ordered-items-header">
+            <p>Name</p>
+            <p>Cost</p>
+            <p>Quantity</p>
+          </div>
+          <div class="added-items-container"></div>
+        </div>
+        <div class="vendor-catalog-container">
+          <div class="vendor-items-header">
+            <p>Name</p>
+            <p>Cost</p>
+            <p></p>
+            <p>Quantity</p>
+            <p></p>
+            <p>Total</p>
+            <p>Remove</p>
+          </div>
+          <div class="vendor-items-container"></div>
+        </div>
+      </div>
+      <button class="save-add-order-button button">Add Items</button>
+      <div class="ordered-items-stats-cont">
+        <!-- Delivery date & order total goes here -->
+      </div>
+      <div class="new-order-button-container">
+        <button class="submit-order-button">Submit Order</button>
+      </div>
+    </div>
+    <div class="receiving-order-container"></div>
+    <div class="cancel-receiving-order_modul">
+      <h1>Confirmation</h1>
+      <p>
+        Are you sure you want to leave this page? <br />Any unsaved changes will
+        be lost.
+      </p>
+      <div class="delete-buttons-container">
+        <button class="confirm-cancel_button modul-button">Yes</button>
+        <button class="deny-cancel_button modul-button">No</button>
+      </div>
+    </div>
+    <div class="vendor-container">
+      <div class="vendor-header">
+        <h1>Vendors</h1>
+        <div class="vendor-header-button">
+          <button class="add-vendor-button">Add Vendor</button>
+          <button class="clear-vendor-button button">Clear</button>
+        </div>
+      </div>
+      <div class="vendor-grid-container"></div>
+      <div class="add-vendor-modul modul">
+        <h1>Add Vendor</h1>
+        <div class="vendor-name-container">
+          <p>Name</p>
+          <input type="text" class="vendor-name-input" />
+        </div>
+        <div class="add-vendor-button-container">
+          <button class="child-add-vendor-button modul-button">Add</button>
+          <button class="add-vendor-modul-close-button modul-button">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="vendor-portfolio">
+      <div class="vendor-portfolio-header">
+        <div class="vendor-portfolio-header-cont"></div>
+        <div>
+          <button class="add-item-portfolio-button">Add Item</button>
+          <button class="close-portfolio-button button">Back</button>
+        </div>
+      </div>
+      <div>
+        <div class="vendor-categories-container">
+          <p>Name <i class="fas fa-sort-amount-down name-icon"></i></p>
+          <p>Price <i class="fas fa-sort-amount-down price-icon"></i></p>
+          <p>UPC</p>
+          <p>Actions</p>
+        </div>
+      </div>
+      <div class="vendor-portfolio-content"></div>
+      <div class="add-item-portfolio-modul">
+        <div>
+          <p>Name</p>
+          <input type="text" class="item-name-input_portfolio" />
+        </div>
+        <div>
+          <p>Cost</p>
+          <input type="number" class="item-cost-input_portfolio" min="0" />
+        </div>
+        <div>
+          <p>UPC</p>
+          <input type="text" class="item-upc-input_portfolio" />
+        </div>
+        <div class="add-item-portfolio-button-cont"></div>
+      </div>
+      <div class="vendor-portfolio-buttons"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
