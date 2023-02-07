@@ -1,0 +1,692 @@
+/* DESIGN 
+
+----- LIGHT MODE
+BG Color: #ffffff
+Regular Font: #1F2833
+Grey: #797e85
+
+----- DARK MODE
+BG Color: #1F2833
+Regular Font: #e9eaeb
+Grey: #797e85
+*/
+
+/* REUSABLE CLASSES */
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.font-reg {
+  font-family: Inter, "sans-serif";
+}
+
+.button {
+  width: 8rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f2833;
+  color: #e9eaeb;
+}
+
+.input {
+  width: 80%;
+  padding: 10px;
+}
+
+/* START */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* NAVIGATION BAR */
+
+.nav {
+  justify-content: space-between;
+  background-color: #e9eaeb;
+  color: #1f2833;
+  font-size: 2rem;
+  padding: 2rem 10rem;
+}
+
+.fa-boxes-stacked {
+  padding-right: 20px;
+}
+
+/* SIDEBAR AND DASH CONTAINER */
+
+.sidebar-and-dash {
+  grid-template-columns: 21rem 1fr;
+}
+
+/* SIDE BAR */
+
+.side-bar-parent {
+  width: 20.25rem;
+  height: 91.5vh;
+  background-color: #353e47;
+}
+
+.side-bar {
+  justify-content: start;
+  grid-template-columns: 1fr;
+  /* gap: 25px; */
+  color: #e9eaeb;
+}
+
+.side-bar i {
+  font-size: 2rem;
+}
+
+.side-bar p {
+  font-size: 1.5rem;
+}
+
+.sidebar-orders-button {
+  padding-right: 10px;
+}
+
+.more-options {
+  grid-column: 1/ -1;
+  justify-content: center;
+}
+
+.new-order {
+  margin: 0 0 25px;
+}
+
+.dashboard-button,
+.stores-button,
+.inventory-button,
+.orders-button,
+.vendor-button,
+.create-new-order-button,
+.manage-orders-button {
+  height: 5rem;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.dashboard-button:hover,
+.stores-button:hover,
+.inventory-button:hover,
+.orders-button:hover,
+.manage-orders-button:hover,
+.create-new-order-button:hover,
+.vendor-button:hover {
+  cursor: pointer;
+}
+
+.icon {
+  width: 40px;
+  padding-right: 10px;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  padding: 30px;
+}
+
+.dashboard h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.dashboard-flex {
+  gap: 25px;
+}
+
+.week-parent {
+  width: 75%;
+}
+
+.week-child-container {
+  width: 100%;
+  gap: 1.5rem;
+  padding: 20px 0;
+}
+
+.weekday {
+  width: 100%;
+  background-color: #e9eaeb;
+  border-radius: 5px 5px 0 0;
+}
+
+.weekday h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: #a5a9ad;
+}
+
+.weekday-content {
+  height: 20rem;
+  border: 3px solid #a5a9ad;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.weekday-number {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #1f2833;
+}
+
+.order-in-calendar {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.dashboard-stats-container_0 {
+  width: 25%;
+}
+
+.inventory-sum {
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #a5a9ad;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px;
+  height: 24.4rem;
+}
+
+.inventory-sum div {
+  justify-self: center;
+  font-size: 2.5rem;
+}
+
+.inventory-sum h2 {
+  font-size: 2rem;
+}
+
+.dash-row_2 {
+  gap: 2.5rem;
+  margin: 1rem 0;
+}
+
+.dashboard-stats-1_2 {
+  width: 30%;
+}
+
+.dashboard-stats-2_2 {
+  width: 70%;
+}
+
+.stat-container {
+  border: 3px solid #a5a9ad;
+  border-radius: 5px;
+  height: 30rem;
+  margin: 2.5rem 0;
+}
+
+.next-del-day {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.next-del-parent {
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  height: 100%;
+}
+
+.next-del-stat {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* STORES */
+
+.stores {
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.stores-header {
+  justify-content: space-between;
+}
+
+.stores-header h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.stores-button-container {
+  gap: 2.5rem;
+}
+
+.stores-button-container button {
+  width: 10rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f2833;
+  color: #e9eaeb;
+}
+
+.stores-grid-container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.new-store-container {
+  justify-items: center;
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  height: 20rem;
+  background-color: #e9eaeb;
+}
+
+.add-stores-modul {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  background-color: #e9eaeb;
+  width: 50rem;
+  padding: 25px;
+  text-align: center;
+  display: none;
+}
+
+.add-stores-modul h1 {
+  font-size: 3rem;
+}
+
+.store-number-container,
+.store-address-container {
+  margin: 25px 0;
+}
+
+.store-number-container p,
+.store-address-container p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.add-stores-button-container {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.add-stores-button-container button {
+  width: 8rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f2833;
+  color: #e9eaeb;
+}
+
+/* INVENTORY */
+
+.inventory {
+  padding: 30px;
+  max-width: 160rem;
+  display: none;
+}
+
+.inventory-header,
+.header-search-container,
+.inventory-categories-container {
+  justify-content: space-between;
+}
+
+.inventory-header h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.total-items {
+  font-size: 4rem;
+}
+
+.header-search-container {
+  padding: 20px 0;
+}
+
+.child-inventory-container {
+  margin: 25px 0;
+}
+
+.search-container {
+  gap: 10px;
+}
+
+.search-input_inventory {
+  width: 40rem;
+  height: 35px;
+  border: 2px solid #a5a9ad;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search-container button {
+  height: 35px;
+  border: 2px solid #a5a9ad;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.welcome-header-button-container {
+  gap: 2.5rem;
+}
+
+.open-modul {
+  width: 15rem;
+}
+
+.inventory-categories-container {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  background-color: #e9eaeb;
+}
+
+.inventory-categories-container p,
+.confirm-delete-inventory-memo p,
+.edit-inventory-modul p {
+  font-size: 1.5rem;
+}
+
+.confirm-delete-inventory-memo p {
+  margin: 2.5rem 0;
+}
+
+.add-inventory-modul,
+.confirm-delete-inventory-memo,
+.edit-inventory-modul {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  background-color: #e9eaeb;
+  width: 50rem;
+  padding: 25px;
+  text-align: center;
+  display: none;
+}
+
+.add-inventory-modul h1,
+.confirm-delete-inventory-memo h1,
+.edit-inventory-modul h1 {
+  font-size: 3rem;
+}
+
+.add-inventory-button-container,
+.confirm-delete-orders-memo_buttons,
+.edit-inv-button-container {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.add-inventory-button-container button,
+.confirm-delete-orders-memo_buttons button {
+  width: 8rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f2833;
+  color: #e9eaeb;
+}
+
+.input-container p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.add-inventory-button-container,
+.confirm-delete-orders-memo_buttons,
+.edit-inv-button-container {
+  margin: 10px 0;
+  gap: 2.5rem;
+}
+
+.inventory-row-container:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.inventory-row-container {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+/* CREATE NEW ORDER */
+
+.create-new-order {
+  padding: 30px;
+  max-width: 160rem;
+  display: none;
+}
+
+.create-new-order h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.vendor-name-container,
+.delivery-container {
+  align-items: center;
+}
+
+.new-order-options-container {
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.instruct-container {
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.instruct-container p {
+  font-size: 2rem;
+}
+
+.number {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #e9eaeb;
+  background-color: #1f2833;
+}
+
+.step,
+.new-order-buttons-cont {
+  gap: 2.5rem;
+}
+
+.add-items-to-delivery {
+  width: 10rem;
+}
+
+.order-field {
+  max-width: 150rem;
+  height: 40rem;
+  margin: 25px 0;
+  border: 2px solid #a5a9ad;
+}
+
+.vendor-items,
+.added-items {
+  width: 50%;
+  border: 2px solid #a5a9ad;
+}
+
+.vendor-items-header {
+  grid-template-columns: 3fr 1fr 1fr;
+  padding: 10px;
+  background-color: #e9eaeb;
+}
+
+.added-items-header {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  background-color: #e9eaeb;
+}
+
+.vendor-items-container,
+.added-items-container {
+  width: 100%;
+  height: 10rem;
+}
+
+.order-button-container div {
+  width: 50%;
+  justify-content: center;
+}
+
+.order-button-container div button {
+  width: 10rem;
+  padding: 1rem;
+}
+
+/* RECEIVE ORDER */
+
+.receiving-order-container {
+  display: none;
+}
+
+/* MANAGE ORDERS */
+
+.manage-orders {
+  padding: 30px;
+  max-width: 160rem;
+  display: none;
+}
+
+.manage-orders h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.orders-categories-container,
+.pastorders-categories-container {
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  border: 2px solid #a5a9ad;
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+.orders-content,
+.past-orders-content {
+  height: 15rem;
+  border: 2px solid #a5a9ad;
+}
+
+.past-orders-header {
+  margin: 25px 0 0;
+}
+
+.orders-row-content {
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.orders-row-content:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* VENDORS */
+
+.vendor {
+  position: relative;
+  padding: 30px;
+  max-width: 160rem;
+  display: none;
+}
+
+.vendor-container {
+  padding: 30px;
+  max-width: 160rem;
+  display: none;
+}
+
+.vendor-header {
+  justify-content: space-between;
+}
+
+.vendor-header h1 {
+  font-size: 3rem;
+  color: #1f2833;
+}
+
+.vendor-header-button {
+  gap: 2.5rem;
+}
+
+.add-vendor-modul {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  background-color: #e9eaeb;
+  width: 50rem;
+  padding: 25px;
+  text-align: center;
+}
+
+.add-vendor-modul h1 {
+  font-size: 2.5rem;
+}
+
+.vendor-name-container p {
+  font-size: 1.5rem;
+}
+
+.add-vendor-button-container {
+  justify-content: center;
+  margin: 10px 0;
+  gap: 2.5rem;
+}
+
+.add-vendor-button-container button {
+  width: 10rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f2833;
+  color: #e9eaeb;
+}
+
+.add-vendor-button {
+  width: 10rem;
+}
